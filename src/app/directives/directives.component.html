@@ -5,3 +5,19 @@
 <p [ngClass]="{'highlight':isActive }">Hello hi</p>
 <button [attr.disabled]="disabled ? '' :null">disable</button>
 <p [hidden]="isHidden">Hi ramya</p>
+
+<p *ngIf="ifcond else elsecond">hi hello namaste</p>
+<ng-template #elsecond>
+    <p>bye bye</p>
+</ng-template>
+
+<ul>
+    <li *ngFor="let item of users">
+    {{item.username}}</li>
+</ul>
+
+<div [ngSwitch]="switchvalue">
+    <p *ngSwitchCase="'angry'">ramya is angry</p>
+    <p *ngSwitchCase="'not angry'">ramya is not angry</p>
+
+</div>

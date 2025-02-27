@@ -11,6 +11,10 @@ import { CommonModule } from '@angular/common';
 export class DirectivesComponent {
   isActive = true
   isHidden = true
+  ifcond = false
+  
   disabled = true
+  users = [{username:"ramya"},{username:"santosh"},{username:"sasi"}]
+  switchvalue = "angry"
 
 }
