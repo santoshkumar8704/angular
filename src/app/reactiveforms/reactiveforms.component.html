@@ -1,0 +1,23 @@
+<p>
+  reactive forms provide a way to manipulate the forms in a synchronus way it
+  wont directly manipulate the value instead it will generate a new value for
+  every single update
+</p>
+<h4>Form control</h4>
+<div>
+  <p>{{ name.value }}</p>
+  <label for="name">name</label>
+  <input type="text" [formControl]="name" />
+  <button (click)="updateName()">Update Name</button>
+</div>
+<h4>Form Group</h4>
+<div>
+  <form [formGroup]="userDetails" (ngSubmit)="onSubmit()">
+    <label for="user name">user name</label>
+    <input type="text" formControlName="username" />
+    <input type="text" formControlName="Age" />
+    <input type="text" formControlName="Branch" />
+
+    <button type="submit" (click)="onButtonClick()">submit</button>
+  </form>
+</div>
